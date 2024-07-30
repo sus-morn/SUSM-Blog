@@ -1,15 +1,17 @@
 [project]
-name = "SUSM-Blog"
+name = "SUSM-Blog-Backend"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "Mornie", email = "Woyerpa@outlook.com"},
-    {name = "SUS", email = "None"},
+    # {name = "SUS", email = "None"},
 ]
-dependencies = []
+dependencies = [
+    "fastapi>=0.111.1",
+    "uvicorn[standard]>=0.30.3",
+]
 requires-python = ">=3.12"
 readme = "README.md"
-license = "GNU3.0"
 
 [build-system]
 requires = ["setuptools>=61", "wheel"]
