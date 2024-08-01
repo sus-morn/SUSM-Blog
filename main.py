@@ -12,11 +12,15 @@ from backend import launcher
 # print("后端已启动！")
 
 process_backend = launcher.launch()
-
+print("后端服务已启动")
 while True:
-    time.sleep(0.2)
-    output = process_backend.stdout.readline().decode() # type: ignore
-    if output == '' and process_backend.poll() is not None:
+    try:
+        time.sleep(0.2)
+        output = process_backend.stdout.readline().decode() # type: ignore
+        if output == '' and process_backend.poll() is not None:
+            break
+        if output:
+            print(output.strip())
+    except KeyboardInterrupt:
+        print("用户主动结束了进程")
         break
-    if output:
-        print(output.strip())
