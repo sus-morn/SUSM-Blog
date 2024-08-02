@@ -1,6 +1,6 @@
 from fastapi import FastAPI,Depends
 
-from database import session_local, engine, User, Article
+from .database import session_local, engine, User, Article
 app = FastAPI(title="SUSM Blog", description="A simple blog API", version="0.0.1")
 
 # 未来移入Dependency
