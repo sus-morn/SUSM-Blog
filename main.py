@@ -1,6 +1,6 @@
 # import os
 import time
-from . import backend
+from backend import launch
 # import pathlib
 # import subprocess
 
@@ -11,7 +11,7 @@ from . import backend
 # print(process_backend.stderr.readline().decode()) # type: ignore
 # print("后端已启动！")
 
-process_backend = backend.launch()
+process_backend = launch()
 print("后端服务已启动")
 while True:
     try:
