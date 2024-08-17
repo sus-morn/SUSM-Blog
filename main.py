@@ -1,17 +1,17 @@
 # import os
 import time
-from backend import launcher
+from backend import launch
 # import pathlib
 # import subprocess
 
 # path = pathlib.Path(os.path.abspath(__file__))
 
-# # process_frontend = subprocess.Popen(['', ''], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+# process_frontend = subprocess.Popen(['', ''], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 # process_backend = subprocess.Popen('pdm run uvicorn __init__:app --reload', stdout=subprocess.PIPE, stderr=subprocess.PIPE,cwd=path.parent.parent/'backend',shell=True)
 # print(process_backend.stderr.readline().decode()) # type: ignore
 # print("后端已启动！")
 
-process_backend = launcher.launch()
+process_backend = launch()
 print("后端服务已启动")
 while True:
     try:
