@@ -6,7 +6,10 @@ authors = [
     {name = "SUS_Un", email = "cwxiaoyuan@gmail.com"},
     {name = "Mornie", email = "Woyerpa@outlook.com"},
 ]
-dependencies = []
+dependencies = [
+    "fastapi>=0.112.1",
+    "sqlalchemy>=2.0.32",
+]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
