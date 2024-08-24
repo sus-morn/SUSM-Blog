@@ -9,11 +9,17 @@ authors = [
 dependencies = [
     "fastapi>=0.112.1",
     "sqlalchemy>=2.0.32",
+    "loguru>=0.7.2",
+    "uvicorn>=0.30.6",
 ]
-requires-python = "==3.12.*"
+requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
 
 
 [tool.pdm]
 distribution = false
+
+
+[tool.pdm.scripts]
+start = "pdm run start.py"
