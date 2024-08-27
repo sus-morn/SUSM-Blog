@@ -3,18 +3,23 @@ name = "SUSM-Blog"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
+    {name = "SUS_Un", email = "cwxiaoyuan@gmail.com"},
     {name = "Mornie", email = "Woyerpa@outlook.com"},
-    {name = "SUS", email = "None"},
 ]
-dependencies = []
-requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.112.1",
+    "sqlalchemy>=2.0.32",
+    "loguru>=0.7.2",
+    "uvicorn>=0.30.6",
+]
+requires-python = ">=3.11"
 readme = "README.md"
-license = "GNU3.0"
-
-[build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
+license = {text = "MIT"}
 
 
 [tool.pdm]
-distribution = true
+distribution = false
+
+
+[tool.pdm.scripts]
+start = "pdm run start.py"
