@@ -1,1 +1,0 @@
-all = ["backend", "database", "schemas", "tests"]
